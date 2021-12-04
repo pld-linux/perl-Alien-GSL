@@ -1,4 +1,6 @@
 #
+# TODO: fix perl-Alien-Build dirs, this package is noarch
+#
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
@@ -7,7 +9,7 @@
 Summary:	Alien::GSL - Easy installation of the GSL library
 Name:		perl-Alien-GSL
 Version:	1.07
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -23,8 +25,10 @@ BuildRequires:	perl-Alien-Base
 BuildRequires:	perl-Test-Alien
 BuildRequires:	perl-Test2-Suite
 %endif
-BuildArch:	noarch
+#BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_enable_debug_packages	0
 
 %description
 Alien::GSL - Easy installation of the GSL library.
@@ -43,7 +47,7 @@ Alien::GSL - Easy installation of the GSL library.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} pure_install \
+%{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
