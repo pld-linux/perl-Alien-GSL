@@ -10,7 +10,7 @@ Summary:	Alien::GSL - Easy installation of the GSL library
 Summary(pl.UTF-8):	Alien::GSL - łatwa instalacja biblioteki GSL
 Name:		perl-Alien-GSL
 Version:	1.07
-Release:	7
+Release:	8
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
