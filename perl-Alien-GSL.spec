@@ -10,7 +10,7 @@ Summary:	Alien::GSL - Easy installation of the GSL library
 Summary(pl.UTF-8):	Alien::GSL - łatwa instalacja biblioteki GSL
 Name:		perl-Alien-GSL
 Version:	1.07
-Release:	8
+Release:	9
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -62,8 +62,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README.md
 %{perl_vendorarch}/Alien/GSL
 %{perl_vendorarch}/Alien/GSL.pm
-%dir %{perl_vendorarch}/auto/Alien
-%dir %{perl_vendorarch}/auto/Alien/GSL
-%{perl_vendorarch}/auto/Alien/GSL/GSL.txt
+%{perl_vendorarch}/auto/Alien/GSL
 %{perl_vendorarch}/auto/share/dist/Alien-GSL
 %{_mandir}/man3/Alien::GSL.3pm*
